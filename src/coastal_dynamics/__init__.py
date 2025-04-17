@@ -1,8 +1,8 @@
 """Tools for interactive teaching and learning with Jupyter notebooks."""
 
-__author__ = """Floris Calkoen"""
-__email__ = "floris@calkoen.nl"
-__version__ = "0.0.11"
+__author__ = """Floris Calkoen, Kevin de Bruijn, Judith Bosboom"""
+__email__ = "j.bosboom@tudelft.nl"
+__version__ = "1.0.0"
 
 from .factory import QuestionFactory
 from .io import read_questions, write_questions
