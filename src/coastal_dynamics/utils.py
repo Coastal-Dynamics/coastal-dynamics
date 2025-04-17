@@ -9,6 +9,7 @@ from math import log10, floor
 
 import numpy as np
 
+
 def hash_answer(answer, question_type, sig_figs=None):
     """Hash a single answer or a list of answers based on the question type."""
     if question_type == "multiple_selection":
@@ -58,6 +59,7 @@ def round_sig(x, sig):
 
     return round(adjusted_x) / factor
 
+
 def find_free_port():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(("", 0))  # Bind to an available port
@@ -101,7 +103,6 @@ def save_notebook(notebook, new_file_path):
     with open(new_file_path, "w", encoding="utf-8") as f:
         json.dump(notebook, f, indent=4, ensure_ascii=False)
     return
-
 
 
 # NOT NEEDED ANYMORE SINCE WE ARE USING RELATIVE FILE PATHS EVERYWHERE
