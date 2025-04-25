@@ -15,6 +15,7 @@ class QuestionFactory:
 
     Methods:
         create_question_widget(): Creates a question widget based on the question data.
+        serve(): Returns the question widget
     """
 
     def __init__(self, question_key, question_data: dict[str, Any], serve=True):
@@ -26,6 +27,8 @@ class QuestionFactory:
             self.question_widget.serve(question_key)
 
     def create_question_widget(self):
+        """Method that calls the correct creater function based on the question type."""
+
         question_type = self.question_data.get("type")
         valid_types = {
             "multiple_choice": self._create_multiple_choice_question,
@@ -42,6 +45,13 @@ class QuestionFactory:
         return create_func()
 
     def _create_multiple_choice_question(self):
+        """
+        Method that creates mutliple choice question widget from question data.
+
+        Returns:
+            MultipleChoiceQuestion (class) 
+        """
+
         required_fields = ["name", "question", "options", "answer", "feedback"]
         self._validate_required_fields(required_fields)
 
@@ -54,6 +64,13 @@ class QuestionFactory:
         )
 
     def _create_multiple_selection_question(self):
+        """
+        Method that creates mutliple selection question widget from question data.
+        
+        Returns:
+            MultipleSelectionQuestion (class) 
+        """
+
         required_fields = ["name", "question", "options", "answer", "feedback"]
         self._validate_required_fields(required_fields)
 
@@ -66,6 +83,13 @@ class QuestionFactory:
         )
 
     def _create_numeric_question(self):
+        """
+        Method that creates numeric question widget from question data.
+        
+        Returns:
+            NumericQuestion (class)
+        """
+
         required_fields = ["name", "question", "answer", "feedback"]
         self._validate_required_fields(required_fields)
 
@@ -80,6 +104,13 @@ class QuestionFactory:
         )
 
     def _create_text_question(self):
+        """
+        Method that creates text question widget from question data.
+        
+        Returns:
+            TextQuestion (class)
+        """
+
         required_fields = ["name", "question", "answer", "feedback"]
         self._validate_required_fields(required_fields)
 
@@ -91,11 +122,19 @@ class QuestionFactory:
         )
 
     def _validate_required_fields(self, required_fields):
+        """Method that checks if all question data is present for creating a question widget."""
+
         for field in required_fields:
             if field not in self.question_data:
                 raise ValueError(f"Missing required field: {field} in question data")
 
     def serve(self, key):
+        """
+        Delegates serving of question to subclasses
+
+        Returns:
+            question widget (pn.Column)
+        """
         return self.question_widget.serve(key)
 
 

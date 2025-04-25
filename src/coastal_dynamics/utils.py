@@ -61,6 +61,7 @@ def round_sig(x, sig):
 
 
 def find_free_port():
+    """Finds an available port to serve a panel app."""
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(("", 0))  # Bind to an available port
         return s.getsockname()[1]  # Get assigned port

@@ -6,17 +6,31 @@ import panel as pn
 
 
 class UseAnswersApp:
+    """
+    Class for creating and serving an application that allows users to use or 'reset' their previously given answers.
+    """
     def __init__(self, notebook_prefix="1a"):
         self.saved_answers_path = Path("./saved_answers.json")
 
         # get notebook prefix
         self.notebook_prefix = notebook_prefix
-        # self.notebook_prefix = str("1a_tectonic_classification").split("_")[0]
 
     def serve(self):
+        """
+        Function for building the application.
+        
+        Returns:
+            application (pn.Column)
+        """
         return self.build_app()
 
     def get_number_saved_answers(self):
+        """
+        Computes the number of given answers present in any previous saves.
+        
+        Returns:
+            number of given answers (int)
+        """
         # check if the file exists
         if os.path.exists(self.saved_answers_path):
             # read the file
@@ -38,6 +52,12 @@ class UseAnswersApp:
         return n_questions
 
     def build_app(self):
+        """
+        Build the app (with all text and buttons).
+        
+        Returns:
+            app (pn.Column)
+        """
         self.n_questions = self.get_number_saved_answers()
         self.n_questions_removed = 0
 
@@ -85,6 +105,15 @@ class UseAnswersApp:
             disregard_saved_answers_button_value,
             are_you_sure_button_value,
         ):
+            """Function to keep track of button presses.
+            
+            Arguments:
+                help_button_value (bool)
+                use_saved_answers_button_value (bool) --> OUTDATED
+                disregard_saved_answers_button_value (bool)
+                are_you_sure_button_value (bool)
+                
+            """
             if help_button_value:
                 self.help_text_widget.value = self.help_text
             else:
@@ -118,6 +147,12 @@ class UseAnswersApp:
         return app
 
     def disable_widgets(self):
+        """
+        Function to disable all widgets.
+        
+        Returns:
+            True
+        """
         for widget in [
             # self.use_saved_answers_button,
             self.disregard_saved_answers_button,
@@ -130,6 +165,9 @@ class UseAnswersApp:
         return True
 
     def remove_question_keys(self, fp=Path("saved_answers.json")):
+        """
+        Function to remove previously saved answers (i.e., question keys) from served question apps.
+        """
         if os.path.exists(fp):
             # read the file
             with open(self.saved_answers_path, "r") as f:
@@ -153,6 +191,7 @@ class UseAnswersApp:
         self.disable_widgets()
 
     def rename_saved_answers(self, fname):
+        """Function to rename saved answer file to a new file."""
         with open(self.saved_answers_path, "r") as f:
             saved_answers = json.load(f)
 

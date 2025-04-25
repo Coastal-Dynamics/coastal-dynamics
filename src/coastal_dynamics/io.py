@@ -59,6 +59,11 @@ def read_questions(
 
 
 def write_questions(processed_questions, hashed_blob_name, storage_options, storage):
+    """
+    Writes questions to .json file, either to an online repo (storage="azure") or locally (storage="local").
+
+    UPDATE: storage="azure" has become outdated and is no longer funcitonal.
+    """
     if storage == "azure":
         fs = adlfs.AzureBlobFileSystem(**storage_options)
 

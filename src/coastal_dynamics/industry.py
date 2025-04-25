@@ -13,8 +13,10 @@ class QuestionIndustry:
     An industry class for creating and managing question widgets for a jupyter notebook.
 
     Attributes:
-                question_data (Dict[str, Any]): Dictionary containing data for all questions in a notebook
+        question_data (Dict[str, Any]): Dictionary containing data for all questions in a notebook
 
+    Methods:
+        serve: Serves a pn.column concatenating multiple questions.
     """
 
     def __init__(self, question_dict):
@@ -24,6 +26,15 @@ class QuestionIndustry:
         self.question_counter = 1
 
     def serve(self, key_list):
+        """
+        Serves a pn.column concatenating multiple questions.
+
+        Arguments:
+            key_list: list with keys referring to specific questions in the question database (.json)
+        
+        Returns:
+            question widget (pn.Column) containing multiple questions
+        """
         # initialize column
         question_col = pn.Column(
             width_policy="max"
