@@ -1,7 +1,7 @@
 # coastal-dynamics
 
 ## Description
-The coastal-dynamics package was developed at Delft University of Technology by the Coastal Dynamics course as an educational tool to facilitate an online and open source educational suite. For more information, see the [GitHub organization](https://github.com/Coastal-Dynamics) of the Coastal Dynamics teaching team.
+The coastal-dynamics package was developed at Delft University of Technology by the Coastal Dynamics teaching team as an educational tool to facilitate an online and open source educational suite. For more information, see the [GitHub organization](https://github.com/Coastal-Dynamics) of the Coastal Dynamics teaching team.
 
 ## Installation
 To install the coastal-dynamics package from PyPI, run 'pip install coastal_dynamics'.
