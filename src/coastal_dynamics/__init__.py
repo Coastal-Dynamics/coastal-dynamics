@@ -1,6 +1,8 @@
 """Tools for interactive teaching and learning with Jupyter notebooks."""
 
-__author__ = """Floris Calkoen, Kevin de Bruijn, Judith Bosboom"""
+__author__ = (
+    """TU Delft Coastal Dynamics, Floris Calkoen, Kevin de Bruijn, Judith Bosboom"""
+)
 __email__ = "j.bosboom@tudelft.nl"
 __version__ = "1.0.0"
 

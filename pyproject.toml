@@ -2,7 +2,7 @@
 name = "coastal-dynamics"
 version = "1.0.0"
 description = "Python package for Coastal Dynamics at Delft University of Technology"
-authors = ["Floris Calkoen", "Kevin de Bruijn"]
+authors = ["TU Delft Coastal Dynamics <j.bosboom@tudelft.nl>", "Floris Calkoen", "Kevin de Bruijn", "Judith Bosboom"]
 license = "BSD"
 readme = "README.md"
 
