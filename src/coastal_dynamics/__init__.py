@@ -4,7 +4,7 @@ __author__ = (
     """TU Delft Coastal Dynamics, Floris Calkoen, Kevin de Bruijn, Judith Bosboom"""
 )
 __email__ = "j.bosboom@tudelft.nl"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from .factory import QuestionFactory
 from .io import read_questions, write_questions
