@@ -40,8 +40,10 @@ class TextQuestion(Question):
 
     def check_answer(self, event) -> None:
         """Check the submitted answer against the correct answer."""
-        user_answer = self.hash_answer(str(self.answer_input.value).lower(), "text")
-        if user_answer == self.correct_answer:
+        user_answer = str(self.answer_input.value).lower()
+        hashed_user_answer = self.hash_answer(user_answer, "text")
+
+        if hashed_user_answer == self.correct_answer:
             self.feedback_widget.value = self.feedback["correct"]
         else:
             self.feedback_widget.value = self.feedback["incorrect"]
