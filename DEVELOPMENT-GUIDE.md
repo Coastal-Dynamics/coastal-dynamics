@@ -45,9 +45,16 @@ Any changes made to the source code of the coastal-dynamics package is now direc
 We use the pre-commit package to manage and maintain pre-commit hooks. pre-commit should be installed in your coastalcodebook package. Check for it in the list by typing the following command in the prompt:
 mamba list
 
+Next, we ensure pre-commit is installed for your repoistory. Navigate to the coastal-dynamics repository in the prompt, and run
+pre-commit install
 
+Finally, run pre-commit using the command:
+pre-commit run --all-files
+
+Commit the changes made by pre-commit.
 
 ## 6. Merge to main
 
-•	Merge to main
+•	Merge to main by ensuring all the changes are pushed to the remote ('git push')
+•	Create a pull request in the online repository
 •	Delete your branch
