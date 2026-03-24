@@ -7,7 +7,7 @@ The coastal-dynamics package was developed at Delft University of Technology by 
 To install the coastal-dynamics package from PyPI, run 'pip install coastal_dynamics'.
 
 ## Usage
-We use the coastal-dynamics package to generate interactive python widgets from question data. So far, we have implemented standardized formats for multiple choice, multiple selection, numeric, and text questions. 
+We use the coastal-dynamics package to generate interactive python widgets from question data. So far, we have implemented standardized formats for multiple choice, multiple selection, numeric, and text questions.
 
 Given answers are automatically hashed and compared to the hashed answers in the question data.
 
