@@ -49,7 +49,7 @@ class QuestionFactory:
         Method that creates mutliple choice question widget from question data.
 
         Returns:
-            MultipleChoiceQuestion (class) 
+            MultipleChoiceQuestion (class)
         """
 
         required_fields = ["name", "question", "options", "answer", "feedback"]
@@ -66,9 +66,9 @@ class QuestionFactory:
     def _create_multiple_selection_question(self):
         """
         Method that creates mutliple selection question widget from question data.
-        
+
         Returns:
-            MultipleSelectionQuestion (class) 
+            MultipleSelectionQuestion (class)
         """
 
         required_fields = ["name", "question", "options", "answer", "feedback"]
@@ -85,7 +85,7 @@ class QuestionFactory:
     def _create_numeric_question(self):
         """
         Method that creates numeric question widget from question data.
-        
+
         Returns:
             NumericQuestion (class)
         """
@@ -106,7 +106,7 @@ class QuestionFactory:
     def _create_text_question(self):
         """
         Method that creates text question widget from question data.
-        
+
         Returns:
             TextQuestion (class)
         """

@@ -8,8 +8,8 @@ Before starting development, we advice to have the code locally with an editable
 
 For instructions on cloning a git repository, see: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-The coastal-dynamics repository can be found here: 
-https://github.com/Coastal-Dynamics/coastal-dynamics 
+The coastal-dynamics repository can be found here:
+https://github.com/Coastal-Dynamics/coastal-dynamics
 
 ## 1. Re-install
 Within the coastalcodebook environment, the coastal-dynamics package is installed from the pypi library. In order to test changes made to the package locally, you have to create a local ‘developer installation’. That way, whenever the package is loaded in python, the code used is pulled from the local machine instead of the installation from pypi.
@@ -20,7 +20,7 @@ mamba activate coastalcodebook
 pip uninstall coastal-dynamics
 - Navigate to the coastal-dynamics local directory (i.e., the directory that was created during step 0).
 cd …/coastal-dynamics
-- Install the package in the current directory (i.e., the coastal-dynamics directory) in developer (‘editor’) mode. 
+- Install the package in the current directory (i.e., the coastal-dynamics directory) in developer (‘editor’) mode.
     > Make sure to include the ‘.’ at the end of the command!
 pip install -e .
 
@@ -50,4 +50,4 @@ mamba list
 ## 6. Merge to main
 
 •	Merge to main
-•	Delete your branch 
+•	Delete your branch

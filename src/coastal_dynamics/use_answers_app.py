@@ -9,6 +9,7 @@ class UseAnswersApp:
     """
     Class for creating and serving an application that allows users to use or 'reset' their previously given answers.
     """
+
     def __init__(self, notebook_prefix="1a"):
         self.saved_answers_path = Path("./saved_answers.json")
 
@@ -18,7 +19,7 @@ class UseAnswersApp:
     def serve(self):
         """
         Function for building the application.
-        
+
         Returns:
             application (pn.Column)
         """
@@ -27,7 +28,7 @@ class UseAnswersApp:
     def get_number_saved_answers(self):
         """
         Computes the number of given answers present in any previous saves.
-        
+
         Returns:
             number of given answers (int)
         """
@@ -54,7 +55,7 @@ class UseAnswersApp:
     def build_app(self):
         """
         Build the app (with all text and buttons).
-        
+
         Returns:
             app (pn.Column)
         """
@@ -106,13 +107,13 @@ class UseAnswersApp:
             are_you_sure_button_value,
         ):
             """Function to keep track of button presses.
-            
+
             Arguments:
                 help_button_value (bool)
                 use_saved_answers_button_value (bool) --> OUTDATED
                 disregard_saved_answers_button_value (bool)
                 are_you_sure_button_value (bool)
-                
+
             """
             if help_button_value:
                 self.help_text_widget.value = self.help_text
@@ -149,7 +150,7 @@ class UseAnswersApp:
     def disable_widgets(self):
         """
         Function to disable all widgets.
-        
+
         Returns:
             True
         """

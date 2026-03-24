@@ -31,7 +31,7 @@ class QuestionIndustry:
 
         Arguments:
             key_list: list with keys referring to specific questions in the question database (.json)
-        
+
         Returns:
             question widget (pn.Column) containing multiple questions
         """
