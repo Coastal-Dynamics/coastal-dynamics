@@ -22,7 +22,7 @@ pip uninstall coastal-dynamics
 cd …/coastal-dynamics
 - Install the package in the current directory (i.e., the coastal-dynamics directory) in developer (‘editor’) mode.
     > Make sure to include the ‘.’ at the end of the command!
-pip install -e .
+`pip install -e .`
 
 The coastal-dynamics package is now installed in developer mode (as an editable package) in the coastalcodebook environment.
 
