@@ -16,7 +16,7 @@ from .text import TextQuestion
 from .utils import hash_answer, launch_app, load_notebook, save_notebook
 
 from .industry import QuestionIndustry
-from .modify_notebooks import clear_answers
+from .modify_notebooks import clear_answers, replace_popouts
 from .use_answers_app import UseAnswersApp
 
 __all__ = [
