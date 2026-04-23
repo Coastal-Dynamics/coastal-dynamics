@@ -30,3 +30,21 @@ def clear_answers(
         notebook["cells"][i_cell]["source"] = source
 
     return notebook, number_of_answers_removed
+
+
+def replace_popouts(notebook, popout_func="cd.launch_app"):
+    number_of_popouts_removed = 0
+
+    # loop through cells
+    for i_cell in range(len(notebook["cells"])):
+        source = notebook["cells"][i_cell]["source"]
+
+        # replace popout function calls
+        new_source = [line.replace(popout_func, "") for line in source]
+
+        notebook["cells"][i_cell]["source"] = new_source
+
+        if new_source != source:
+            number_of_popouts_removed += 1
+
+    return notebook, number_of_popouts_removed
