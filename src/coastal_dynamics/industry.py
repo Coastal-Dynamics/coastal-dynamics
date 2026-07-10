@@ -19,7 +19,7 @@ class QuestionIndustry:
         serve: Serves a pn.column concatenating multiple questions.
     """
 
-    def __init__(self, question_dict, font_size="16px"):
+    def __init__(self, question_dict):
         self.question_dict = question_dict
         self.font_size = font_size
 
