@@ -48,3 +48,26 @@ def replace_popouts(notebook, popout_func="cd.launch_app"):
             number_of_popouts_removed += 1
 
     return notebook, number_of_popouts_removed
+
+
+def clear_notes(notebook, begin_key="#BEGIN_NOTE2TEAM", end_key="#END_NOTE2TEAM"):
+    number_of_notes_removed = 0
+
+    # loop through cells
+    for i_cell in range(len(notebook["cells"])):
+        source = notebook["cells"][i_cell]["source"]
+
+        for i, begin_line in enumerate(source):
+            if begin_key in begin_line:
+                for j, end_line in enumerate(source[i:]):
+                    if end_key in end_line:
+                        source = source[:i] + source[i + j + 1 :]
+
+                        number_of_notes_removed += 1
+
+                        break
+                break
+
+        notebook["cells"][i_cell]["source"] = source
+
+    return notebook, number_of_notes_removed
