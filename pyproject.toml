@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "coastal-dynamics"
-version = "1.0.3"
+version = "1.0.4"
 description = "Python package for Coastal Dynamics at Delft University of Technology"
 authors = ["TU Delft Coastal Dynamics <j.bosboom@tudelft.nl>", "Floris Calkoen", "Kevin de Bruijn", "Judith Bosboom"]
 license = "BSD"

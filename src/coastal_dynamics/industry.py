@@ -21,6 +21,7 @@ class QuestionIndustry:
 
     def __init__(self, question_dict):
         self.question_dict = question_dict
+        self.font_size = font_size
 
         self.served_questions = []
         self.question_counter = 1

@@ -39,7 +39,7 @@ class MultipleChoiceQuestion(Question):
         """Create and initialize the Panel widgets for the question."""
         super().create_widgets()
         self.options_widget = pn.widgets.RadioBoxGroup(
-            name="Options", options=list(self.options.values())
+            name="Options", options=list(self.options.values()), value=[]
         )
         self.submit_button.on_click(self._check_answer)
 

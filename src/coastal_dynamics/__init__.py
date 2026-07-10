@@ -4,7 +4,7 @@ __author__ = (
     """TU Delft Coastal Dynamics, Floris Calkoen, Kevin de Bruijn, Judith Bosboom"""
 )
 __email__ = "j.bosboom@tudelft.nl"
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 from .factory import QuestionFactory
 from .io import read_questions, write_questions
@@ -16,7 +16,7 @@ from .text import TextQuestion
 from .utils import hash_answer, launch_app, load_notebook, save_notebook
 
 from .industry import QuestionIndustry
-from .modify_notebooks import clear_answers, replace_popouts
+from .modify_notebooks import clear_answers, replace_popouts, clear_notes
 from .use_answers_app import UseAnswersApp
 
 __all__ = [
@@ -34,5 +34,7 @@ __all__ = [
     "write_questions",
     "QuestionIndustry",
     "clear_answers",
+    "replace_popouts",
+    "clear_notes",
     "UseAnswersApp",
 ]
