@@ -1,3 +1,9 @@
+> **This repository has moved**
+>
+> Development is now hosted on [coastal-dynamics on Codeberg](https://codeberg.org/coastal-dynamics/coastal-dynamics).
+> 
+> This GitHub repository is no longer maintained.
+
 # coastal-dynamics
 
 ## Description
